@@ -15,11 +15,7 @@ const profileUrl = `/users/${message.author.handle}`;
 const imageAlt = `${message.author.avatarDescription} (user profile photo)`;
 
 export const Critter = () => {
-  return (
-    <article>
-      {/*
-        Stuff here!
-      */}
-    </article>
-  );
+  return <article>{message.content}</article>;
 };
+
+// export default Critter;
