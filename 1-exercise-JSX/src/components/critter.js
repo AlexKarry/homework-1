@@ -15,7 +15,17 @@ const profileUrl = `/users/${message.author.handle}`;
 const imageAlt = `${message.author.avatarDescription} (user profile photo)`;
 
 export const Critter = () => {
-  return <article>{message.content}</article>;
+  return (
+    <article>
+      <header>
+        <img
+          src={message.author.avatarSrc}
+          alt={message.author.avatarDescription}
+        ></img>
+        <a href={profileUrl}>{message.author.name}</a>
+      </header>
+      <p>{message.content}</p>
+      <footer>Posted {message.published}</footer>
+    </article>
+  );
 };
-
-// export default Critter;
